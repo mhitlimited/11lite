@@ -1,14 +1,28 @@
 # CPbOX
 
-একটি সহজ, মোবাইল-ফ্রেন্ডলি APK তথ্য ও ডাউনলোড ওয়েবসাইট।
+Professional, responsible and simple static app information website.
 
-## ফোল্ডার
+## Structure
 
-- `index.html` — হোম পেজ
-- `pages/facebook-lite.html` — GitHub Releases-এর Lite APK লিংক
-- `pages/messenger.html` — Messenger-এর অফিসিয়াল লিংক
-- `pages/apk.html` — APK পেজ
-- `assets/css/style.css` — সব স্টাইল
-- `assets/js/script.js` — ছোট JavaScript ফাইল
+- `index.html` — home page
+- `pages/facebook-lite.html` — Facebook Lite download list
+- `pages/messenger.html` — Messenger official link
+- `pages/apk.html` — APK library page
+- `assets/css/style.css` — styling
+- `assets/js/script.js` — year update script
 
-Facebook Lite APK লিংকগুলো `mhitlimited/11lite`-এর `Fb-11-lite` GitHub Release থেকে নেওয়া হয়েছে।
+## Source policy
+
+- Preferred source: official app stores
+- Secondary source: repository release assets
+- Add verification and permissions checks before installing third-party APK files
+
+## Local preview
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open:
+
+- http://localhost:8000/
