@@ -17,45 +17,45 @@
 
         <div class="actions">
           <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
-            <svg id="iconMoon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <svg id="iconMoon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 1 0 9.79 9.79z"/>
             </svg>
-            <svg id="iconSun" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:none">
-              <path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.8 1.42-1.42zm10.48 14.32l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM1 13h3v-2H1v2zm19 0h3v-2h-3v2zM4.96 19.04l-1.41 1.41 1.8 1.79 1.41-1.41-1.8-1.79zM12 5a7 7 0 100 14 7 7 0 000-14zm7.04-1.96l1.41-1.41-1.79-1.8-1.41 1.41 1.79 1.8zM13 23v-3h-2v3h2zm0-19V1h-2v3h2z"/>
+            <svg id="iconSun" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:none" aria-hidden="true">
+              <path d="M12 2.75a1 1 0 0 1 1 1V5a1 1 0 1 1-2 0V3.75a1 1 0 0 1 1-1zm0 14.5a1 1 0 0 1 1 1V19a1 1 0 1 1-2 0v-1.75a1 1 0 0 1 1-1zm8.25-5.5a1 1 0 0 1 0 2h-1.75a1 1 0 1 1 0-2h1.75zm-14.5 0a1 1 0 0 1 0 2H3.75a1 1 0 1 1 0-2h1.75zm9.7-5.46a1 1 0 0 1 1.42 0l1.24 1.24a1 1 0 0 1-1.41 1.41L9.84 7.67a1 1 0 0 1 1.41-1.41zm-8.9 8.9a1 1 0 0 1 1.42 0l1.24 1.24a1 1 0 0 1-1.41 1.41L7.08 17.32a1 1 0 0 1 1.41-1.41zm0-8.9a1 1 0 0 1 0 1.42L7.1 8.9A1 1 0 0 1 5.69 7.49L6.93 6.25a1 1 0 0 1 1.42 0zm11.59 11.59a1 1 0 0 1 0 1.42l-1.24 1.24a1 1 0 1 1-1.41-1.41l1.24-1.24a1 1 0 0 1 1.41 0zM12 7a5 5 0 1 1 0 10a5 5 0 0 1 0-10z"/>
             </svg>
           </button>
 
           <button class="icon-btn hamburger" id="menuToggle" aria-label="Menu">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z" />
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
             </svg>
           </button>
+
+          <button id="langToggle" class="icon-btn" aria-label="Toggle Language">EN/BN</button>
         </div>
 
         <div class="menu" id="menu">
-          <a class="active" href="#home">Home</a>
-          <a href="#apps">Apps</a>
-          <a href="#docs">Docs</a>
-          <a href="#contact">Contact</a>
+          <a href="index.html">Home</a>
+          <a class="active" href="#">Apps</a>
+          <a href="index.html#docs">Docs</a>
+          <a href="index.html#contact">Contact</a>
         </div>
-      <button id="langToggle" class="icon-btn" aria-label="Toggle Language">EN/BN</button></nav>
+      </nav>
     </div>
   </header>
 
   <main class="container">
     <section>
       <h1 class="page-title">Facebook Lite Versions (Lite-1 ➜ Lite-11)</h1>
-      <p class="muted">নীচে প্রতিটি ভার্সনের জন্য আলাদা বক্স ও ডাউনলোড বাটন আছে। বাটনে ক্লিক করলে ৫ সেকেন্ড কাউন্টডাউন শেষে অটো-ডাউনলোড হবে।</p>
+      <p class="muted">নীচে প্রতিটি ভার্সনের জন্য আলাদা বক্স ও ডাউনলোড বাটন আছে। সবগুলোই দ্রুত এবং লাইটওয়েট।</p>
+      <div style="margin: .5rem 0 1rem"><a id="backBtn" class="btn btn-ghost" href="index.html" data-i18n="back">পিছনে</a></div>
     </section>
 
-    <div style="margin: .5rem 0 1rem"><a id="backBtn" class="btn btn-ghost" href="index.html" data-i18n="back">পিছনে</a></div>
     <section class="grid">
-      <!-- Cards will be populated here -->
       <div id="cards" class="grid"></div>
     </section>
   </main>
 
-  <!-- Timer Modal -->
   <div id="timerModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="timerTitle" aria-describedby="timerDesc">
     <div class="modal-content card">
       <h2 id="timerTitle">Preparing your download…</h2>
@@ -78,112 +78,86 @@
 
   <script src="script.js"></script>
   <script>
-  // ------- Page specific JS for fb11ite.html -------
-  // Data: version name and download links
-  const versions = [
-    { name: 'Lite-1 (Official Play Store)', link: 'https://play.google.com/store/apps/details?id=com.facebook.lite' },
-    { name: 'Lite-2', link: '/downloads/fb-lite-2.apk' },
-    { name: 'Lite-3', link: '/downloads/fb-lite-3.apk' },
-    { name: 'Lite-4', link: '/downloads/fb-lite-4.apk' },
-    { name: 'Lite-5', link: '/downloads/fb-lite-5.apk' },
-    { name: 'Lite-6', link: '/downloads/fb-lite-6.apk' },
-    { name: 'Lite-7', link: '/downloads/fb-lite-7.apk' },
-    { name: 'Lite-8', link: '/downloads/fb-lite-8.apk' },
-    { name: 'Lite-9', link: '/downloads/fb-lite-9.apk' },
-    { name: 'Lite-10', link: '/downloads/fb-lite-10.apk' },
-    { name: 'Lite-11', link: '/downloads/fb-lite-11.apk' },
-  ];
+    const versions = [
+      { name: 'Lite-1 (Official Play Store)', link: 'https://play.google.com/store/apps/details?id=com.facebook.lite' },
+      { name: 'Lite-2', link: '/downloads/fb-lite-2.apk' },
+      { name: 'Lite-3', link: '/downloads/fb-lite-3.apk' },
+      { name: 'Lite-4', link: '/downloads/fb-lite-4.apk' },
+      { name: 'Lite-5', link: '/downloads/fb-lite-5.apk' },
+      { name: 'Lite-6', link: '/downloads/fb-lite-6.apk' },
+      { name: 'Lite-7', link: '/downloads/fb-lite-7.apk' },
+      { name: 'Lite-8', link: '/downloads/fb-lite-8.apk' },
+      { name: 'Lite-9', link: '/downloads/fb-lite-9.apk' },
+      { name: 'Lite-10', link: '/downloads/fb-lite-10.apk' },
+      { name: 'Lite-11', link: '/downloads/fb-lite-11.apk' }
+    ];
 
-  // Build cards
-  const cardsWrap = document.getElementById('cards');
-  cardsWrap.classList.add('grid-3'); // use 3-column layout if theme supports
-  versions.forEach((v, idx) => {
-    const card = document.createElement('article');
-    card.className = 'card';
-    card.innerHTML = `
-      <div class="card-body">
-        <h3>${v.name}</h3>
-        <p class="muted">লাইটওয়েট ফেসবুক লাইট ভ্যারিয়েন্ট।</p>
-        <div class="actions">
-          <a href="#" class="btn download-btn" data-link="${v.link}">ডাউনলোড</a>
+    const cardsWrap = document.getElementById('cards');
+    cardsWrap.classList.add('grid-3');
+
+    versions.forEach((v) => {
+      const card = document.createElement('article');
+      card.className = 'card';
+      card.innerHTML = `
+        <div class="card-body">
+          <h3>${v.name}</h3>
+          <p class="muted">লাইটওয়েট ফেসবুক লাইট ভ্যারিয়েন্ট।</p>
+          <div class="actions">
+            <a href="#" class="btn download-btn" data-link="${v.link}">ডাউনলোড</a>
+          </div>
         </div>
-      </div>
-    `;
-    cardsWrap.appendChild(card);
-  });
-
-  // Timer modal logic
-  const modal = document.getElementById('timerModal');
-  const countdownEl = document.getElementById('countdown');
-  const downloadNowBtn = document.getElementById('downloadNow');
-  const cancelBtn = document.getElementById('cancelDownload');
-  let timer = null;
-  let targetLink = null;
-  let remaining = 5;
-
-  function openModal(link) {
-    targetLink = link;
-    remaining = 5;
-    countdownEl.textContent = remaining;
-    modal.classList.add('open');
-    modal.setAttribute('aria-hidden', 'false');
-    timer = setInterval(() => {
-      remaining -= 1;
-      countdownEl.textContent = remaining;
-      if (remaining <= 0) {
-        clearInterval(timer);
-        startDownload();
-      }
-    }, 1000);
-  }
-
-  function closeModal() {
-    if (timer) clearInterval(timer);
-    modal.classList.remove('open');
-    modal.setAttribute('aria-hidden', 'true');
-  }
-
-  function startDownload() {
-    // trigger download
-    window.location.href = targetLink;
-    closeModal();
-  }
-
-  document.querySelectorAll('.download-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const link = btn.getAttribute('data-link');
-      openModal(link);
+      `;
+      cardsWrap.appendChild(card);
     });
-  });
 
-  downloadNowBtn.addEventListener('click', startDownload);
-  cancelBtn.addEventListener('click', closeModal);
+    const modal = document.getElementById('timerModal');
+    const countdownEl = document.getElementById('countdown');
+    const downloadNowBtn = document.getElementById('downloadNow');
+    const cancelBtn = document.getElementById('cancelDownload');
+    let timer = null;
+    let targetLink = null;
+    let remaining = 5;
 
-  // Close modal on Esc
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal();
-  });
+    function openModal(link) {
+      targetLink = link;
+      remaining = 5;
+      countdownEl.textContent = remaining;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      timer = setInterval(() => {
+        remaining -= 1;
+        countdownEl.textContent = remaining;
+        if (remaining <= 0) {
+          clearInterval(timer);
+          startDownload();
+        }
+      }, 1000);
+    }
+
+    function closeModal() {
+      if (timer) clearInterval(timer);
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+
+    function startDownload() {
+      window.location.href = targetLink;
+      closeModal();
+    }
+
+    document.querySelectorAll('.download-btn').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const link = btn.getAttribute('data-link');
+        openModal(link);
+      });
+    });
+
+    downloadNowBtn.addEventListener('click', startDownload);
+    cancelBtn.addEventListener('click', closeModal);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
   </script>
-
-  <style>
-  /* Page-local additions that follow theme tokens */
-  .grid-3 { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
-    gap: 1rem; 
-  }
-  .card { border: 1px solid var(--border, #1f2a2e); border-radius: 12px; background: var(--surface, #0f1416); }
-  .card-body { padding: 1rem; }
-  .actions { margin-top: .75rem; display:flex; gap:.5rem; }
-  .btn { padding: .6rem 1rem; border-radius: 10px; border: 1px solid var(--border, #1f2a2e); text-decoration: none; display:inline-block }
-  .btn:hover { transform: translateY(-1px); }
-  .btn-ghost { background: transparent; }
-  .modal { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,.5); backdrop-filter: blur(2px); }
-  .modal.open { display: flex; }
-  .modal .card { max-width: 420px; width: 92%; }
-  .page-title { margin: 1.25rem 0 .5rem; }
-  .muted { opacity: .75; }
-  </style>
 </body>
 </html>

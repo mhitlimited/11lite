@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>CyberHub — Hacker Style</title>
+  <title>CPbOX — Home</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,19 +17,21 @@
 
         <div class="actions">
           <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
-            <svg id="iconMoon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <svg id="iconMoon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 1 0 9.79 9.79z"/>
             </svg>
-            <svg id="iconSun" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:none">
-              <path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.8 1.42-1.42zm10.48 14.32l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM1 13h3v-2H1v2zm19 0h3v-2h-3v2zM4.96 19.04l-1.41 1.41 1.8 1.79 1.41-1.41-1.8-1.79zM12 5a7 7 0 100 14 7 7 0 000-14zm7.04-1.96l1.41-1.41-1.79-1.8-1.41 1.41 1.79 1.8zM13 23v-3h-2v3h2zm0-19V1h-2v3h2z"/>
+            <svg id="iconSun" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:none" aria-hidden="true">
+              <path d="M12 2.75a1 1 0 0 1 1 1V5a1 1 0 1 1-2 0V3.75a1 1 0 0 1 1-1zm0 14.5a1 1 0 0 1 1 1V19a1 1 0 1 1-2 0v-1.75a1 1 0 0 1 1-1zm8.25-5.5a1 1 0 0 1 0 2h-1.75a1 1 0 1 1 0-2h1.75zm-14.5 0a1 1 0 0 1 0 2H3.75a1 1 0 1 1 0-2h1.75zm9.7-5.46a1 1 0 0 1 1.42 0l1.24 1.24a1 1 0 0 1-1.41 1.41L9.84 7.67a1 1 0 0 1 1.41-1.41zm-8.9 8.9a1 1 0 0 1 1.42 0l1.24 1.24a1 1 0 0 1-1.41 1.41L7.08 17.32a1 1 0 0 1 1.41-1.41zm0-8.9a1 1 0 0 1 0 1.42L7.1 8.9A1 1 0 0 1 5.69 7.49L6.93 6.25a1 1 0 0 1 1.42 0zm11.59 11.59a1 1 0 0 1 0 1.42l-1.24 1.24a1 1 0 1 1-1.41-1.41l1.24-1.24a1 1 0 0 1 1.41 0zM12 7a5 5 0 1 1 0 10a5 5 0 0 1 0-10z"/>
             </svg>
           </button>
 
           <button class="icon-btn hamburger" id="menuToggle" aria-label="Menu">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z" />
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
             </svg>
           </button>
+
+          <button id="langToggle" class="icon-btn" aria-label="Toggle Language">EN/BN</button>
         </div>
 
         <div class="menu" id="menu">
@@ -42,51 +44,51 @@
     </div>
   </header>
 
-  <section class="hero container" id="home">
-    <span class="pill"><span class="dot-neon"></span> Hacker Neon Theme</span>
-    <h1>সিম্পল ওয়েবসাইট — হেডার, মেনু, ফুটার</h1>
-    <p>ডার্ক (হ্যাকার) স্টাইল ও লাইট মোড টগলসহ সম্পূর্ণ রেসপন্সিভ লেআউট—যেকোনো ডিভাইসে ঝকঝকে।</p>
-    <div class="cta">
-      <a class="btn" href="#apps">Get Started</a>
-      <a class="btn ghost" href="#docs">Read Docs</a>
-    </div>
-  </section>
-
-  
-<section class="grid grid-3" id="app-links">
-  <article class="card">
-    <div class="card-body">
-      <h3>Facebook 11 Lite</h3>
-      
-      <a class="btn" href="fb11lite.html" data-i18n="open">Open/খুলো</a>
-    </div>
-  </article>
-  <article class="card">
-    <div class="card-body">
-      <h3>Messenger 3</h3>
-      
-      <a class="btn" href="messenger3.html" data-i18n="open">Open/খুলো</a>
-    </div>
-  </article>
-  <article class="card">
-    <div class="card-body">
-      <h3>All APK</h3>
-      
-      <a class="btn" href="Allapk.html" data-i18n="open">Open/খুলো</a>
-    </div>
-  </article>
-</section>
-
-
-
-    <section class="grid" id="docs">
-      <div class="card card-full">
-        <h3>ডকুমেন্টেশন</h3>
-        <p>এখানে ব্যবহারবিধি/রিলিজ নোট লিখুন।</p>
+  <main>
+    <section class="hero container" id="home">
+      <span class="pill"><span class="dot-neon"></span> Hacker Neon Theme</span>
+      <h1>সিম্পল ওয়েবসাইট — অ্যাপ ও ডাউনলোড কনটেন্ট</h1>
+      <p>ডার্ক ও লাইট মোড, এডাপটিভ নেভিগেশন, এবং ফেসবুক/মেসেঞ্জার/অ্যাপ পেজের জন্য সুন্দর লেআউট।</p>
+      <div class="cta">
+        <a class="btn" href="#apps">Get Started</a>
+        <a class="btn ghost" href="#docs">Read Docs</a>
       </div>
     </section>
 
-    <section class="grid" id="contact">
+    <section class="container grid grid-3" id="apps">
+      <article class="card">
+        <div class="card-body">
+          <h3>Facebook 11 Lite</h3>
+          <p class="muted">ফেসবুক লাইটের লাইটওয়েট স���স্করণ।</p>
+          <a class="btn" href="fb11lite.html" data-i18n="open">Open/খুলো</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3>Messenger 3</h3>
+          <p class="muted">মেসেঞ্জারের লাইট ওভারভিউ পেজ।</p>
+          <a class="btn" href="messenger3.html" data-i18n="open">Open/খুলো</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3>All APK</h3>
+          <p class="muted">সব APK প্যাকেজ একসাথে দেখুন।</p>
+          <a class="btn" href="Allapk.html" data-i18n="open">Open/খুলো</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="container grid" id="docs">
+      <div class="card card-full">
+        <h3>ডকুমেন্টেশন</h3>
+        <p>এই সাইটে ডাউনলোড পেজ, থিম টগল, এবং সহজ নেভিগেশন সেটআপ করা আছে। প্রয়োজন অনুযায়ী নতুন APK ও লিঙ্ক যুক্ত করতে পারেন।</p>
+      </div>
+    </section>
+
+    <section class="container grid" id="contact">
       <div class="card card-full">
         <h3>যোগাযোগ</h3>
         <p>ইমেইল: you@example.com • টেলিগ্রাম: @your_handle</p>

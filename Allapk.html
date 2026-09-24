@@ -17,28 +17,30 @@
 
         <div class="actions">
           <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
-            <svg id="iconMoon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <svg id="iconMoon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 1 0 9.79 9.79z"/>
             </svg>
-            <svg id="iconSun" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:none">
-              <path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.8 1.42-1.42zm10.48 14.32l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM1 13h3v-2H1v2zm19 0h3v-2h-3v2zM4.96 19.04l-1.41 1.41 1.8 1.79 1.41-1.41-1.8-1.79zM12 5a7 7 0 100 14 7 7 0 000-14zm7.04-1.96l1.41-1.41-1.79-1.8-1.41 1.41 1.79 1.8zM13 23v-3h-2v3h2zm0-19V1h-2v3h2z"/>
+            <svg id="iconSun" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:none" aria-hidden="true">
+              <path d="M12 2.75a1 1 0 0 1 1 1V5a1 1 0 1 1-2 0V3.75a1 1 0 0 1 1-1zm0 14.5a1 1 0 0 1 1 1V19a1 1 0 1 1-2 0v-1.75a1 1 0 0 1 1-1zm8.25-5.5a1 1 0 0 1 0 2h-1.75a1 1 0 1 1 0-2h1.75zm-14.5 0a1 1 0 0 1 0 2H3.75a1 1 0 1 1 0-2h1.75zm9.7-5.46a1 1 0 0 1 1.42 0l1.24 1.24a1 1 0 0 1-1.41 1.41L9.84 7.67a1 1 0 0 1 1.41-1.41zm-8.9 8.9a1 1 0 0 1 1.42 0l1.24 1.24a1 1 0 0 1-1.41 1.41L7.08 17.32a1 1 0 0 1 1.41-1.41zm0-8.9a1 1 0 0 1 0 1.42L7.1 8.9A1 1 0 0 1 5.69 7.49L6.93 6.25a1 1 0 0 1 1.42 0zm11.59 11.59a1 1 0 0 1 0 1.42l-1.24 1.24a1 1 0 1 1-1.41-1.41l1.24-1.24a1 1 0 0 1 1.41 0zM12 7a5 5 0 1 1 0 10a5 5 0 0 1 0-10z"/>
             </svg>
           </button>
 
           <button class="icon-btn hamburger" id="menuToggle" aria-label="Menu">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z" />
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
             </svg>
           </button>
+
+          <button id="langToggle" class="icon-btn" aria-label="Toggle Language">EN/BN</button>
         </div>
 
         <div class="menu" id="menu">
-          <a class="active" href="#home">Home</a>
-          <a href="#apps">Apps</a>
-          <a href="#docs">Docs</a>
-          <a href="#contact">Contact</a>
+          <a href="index.html">Home</a>
+          <a class="active" href="#">Apps</a>
+          <a href="index.html#docs">Docs</a>
+          <a href="index.html#contact">Contact</a>
         </div>
-      <button id="langToggle" class="icon-btn" aria-label="Toggle Language">EN/BN</button></nav>
+      </nav>
     </div>
   </header>
 
@@ -49,9 +51,7 @@
       <div style="margin:.5rem 0 1rem"><a id="backBtn" class="btn btn-ghost" href="index.html" data-i18n="back">পিছনে</a></div>
     </section>
 
-    <section class="grid grid-3" id="apk-list">
-      <!-- Add your APK cards here -->
-    </section>
+    <section class="grid grid-3" id="apk-list"></section>
   </main>
 
   <footer>
@@ -66,5 +66,31 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    const apkItems = [
+      { name: 'Facebook 11 Lite', link: 'fb11lite.html' },
+      { name: 'Messenger 3', link: 'messenger3.html' },
+      { name: 'Meta Lite Bundle', link: '#', note: 'কমিং সোন' },
+      { name: 'Instagram Lite', link: '#', note: 'কমিং সোন' },
+      { name: 'Telegram Lite', link: '#', note: 'কমিং সোন' },
+      { name: 'WhatsApp Lite', link: '#', note: 'কমিং সোন' }
+    ];
+
+    const list = document.getElementById('apk-list');
+    apkItems.forEach((app) => {
+      const card = document.createElement('article');
+      card.className = 'card';
+      card.innerHTML = `
+        <div class="card-body">
+          <h3>${app.name}</h3>
+          <p class="muted">${app.note || 'দ্রুত ডাউনলোড এবং সহজ ইনস্টলেশন।'}</p>
+          <div class="actions">
+            <a href="${app.link}" class="btn" data-i18n="open">খুলো</a>
+          </div>
+        </div>
+      `;
+      list.appendChild(card);
+    });
+  </script>
 </body>
 </html>
