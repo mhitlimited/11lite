@@ -1,34 +1,24 @@
-# Facebook 11 Lite
+# CPbOX
 
-This project contains a small collection of lightweight app download pages for Facebook Lite, Messenger, and APK listings. The site is designed with a dark hacker-style UI and supports light/dark theme switching.
+CPbOX is a simple, responsive Bengali-first static website for organized app information and official download sources.
 
-## Features
+## Structure
 
-- Responsive landing page
-- Theme toggle with saved preference
-- Bangla/English UI toggle
-- Download pages for Facebook Lite versions and Messenger versions
-- Simple APK listing page
+- `index.html` — SEO-friendly home page
+- `pages/` — individual content pages
+- `assets/css/` — site styles
+- `assets/js/` — site JavaScript
+- `assets/manifest.webmanifest` — web app metadata
+- `robots.txt` and `sitemap.xml` — crawler guidance
 
-## Pages
+## SEO notes
 
-- `index.html` — home page
-- `fb11lite.html` — Facebook Lite versions
-- `messenger3.html` — Messenger versions
-- `Allapk.html` — APK collection page
+The site includes semantic headings, descriptive page titles, meta descriptions, canonical URLs, internal links, mobile-responsive CSS, and a sitemap. These improve crawlability and usability, but no website can guarantee a Google ranking; useful original content, reliable links, page speed, and Search Console submission are also important.
 
 ## Local preview
-
-Open `index.html` in a browser, or run a simple local server:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then visit:
-
-- http://localhost:8000/
-
-## Notes
-
-The project is a static website. Add or replace APK files in your `downloads` folder as needed and update the links in the page scripts.
+Open `http://localhost:8000/`.
